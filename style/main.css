@@ -450,8 +450,7 @@ body :focus,
 
 /** her **/
 .hero {
-  height: 90vh;
-  max-width: 100vw;
+  height: 80vh;
   width: 100%;
   background-color: #f1f3f4;
   display: -webkit-box;
