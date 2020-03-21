@@ -2,7 +2,7 @@
 /*** breakpoints ***/
 /*** Colors ***/
 /*** Fonts ***/
-@import url("https://fonts.googleapis.com/css?family=Arvo|Quicksand|Teko&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arvo|Montserrat|Quicksand&display=swap");
 /*** header ***/
 /** Main Menu for laptop screens **/
 .main-header {
@@ -35,12 +35,12 @@
 .main-header .brand a {
   font-size: 2.3rem;
   color: #000000;
-  text-transform: uppercase;
   text-decoration: none;
-  font-family: "teko", sans-serif;
+  font-family: "Arvo", serif;
   font-weight: bold;
   -webkit-transition: .3s;
   transition: .3s;
+  line-height: 1;
 }
 
 .main-header .brand a:hover {
@@ -123,8 +123,7 @@
   font-size: 2rem;
   color: #000000;
   text-decoration: none;
-  font-family: "teko", sans-serif;
-  text-transform: uppercase;
+  font-family: "Arvo", serif;
   font-weight: bold;
 }
 
@@ -211,9 +210,8 @@
 .side-menu .brand a {
   font-size: 2.9rem;
   color: #000000;
-  text-transform: uppercase;
   text-decoration: none;
-  font-family: "teko", sans-serif;
+  font-family: "Arvo", serif;
   font-weight: 550;
 }
 
@@ -416,7 +414,7 @@ html :focus, body :focus, * :focus {
 }
 
 .hero h1 {
-  font-family: "teko", sans-serif;
+  font-family: "Arvo", serif;
   color: #fff;
   text-transform: uppercase;
   font-size: 3rem;
