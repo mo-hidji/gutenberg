@@ -8,6 +8,7 @@ html, body, * {
     margin: 0;
     box-sizing: border-box;
     outline: none;
+    scroll-behavior: smooth;
 
     :focus {
         outline: none;
@@ -15,3 +16,137 @@ html, body, * {
 }
 
 /*** main content ***/ 
+/** her **/ 
+
+.hero {
+    height: 90vh;
+    background-color: $lightGray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2% 4%;
+    background-image: url('https://images.unsplash.com/photo-1524749292158-7540c2494485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    /* overlay */ 
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparentize($dark, .8);
+        z-index: -1;
+    }
+
+    /* title h1 */ 
+    h1 {
+        font-family: $mainFont;
+        color: $light;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    /* sub title */ 
+    h4 {
+        font-size: 1.3rem;
+        font-family: $font;
+        line-height: 1;
+        color: $light;
+    }
+
+    /* btns */ 
+    .btns {
+        button {
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-family: $headerFont;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: .3s ease-out;
+        }
+
+        /* hire me button */ 
+        .hire {
+            background-color: $success;
+            color: $light;
+
+            &:hover {
+                background-color: darken($success, 10);
+            }
+        }
+
+        /* CTA btn */ 
+        .cta {
+            background-color: $mainColor;
+            color: $light;
+
+            &:hover {
+                background-color: darken($mainColor, 10);
+            }
+        }
+    }
+
+    /* scroll animation */ 
+    .scroll {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+        width: 30px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 2px solid $light;
+
+        .dot {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            animation: scrollDown 2s ease-out infinite;
+
+            /* animation */ 
+            @keyframes scrollDown {
+                0% {
+                    top: 5px;
+                }
+
+                25% {
+                    opacity: .5;
+                }
+
+                50% {
+                    top: 30px;
+                    opacity: 0;
+                }
+
+                75% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+
+            }
+        }
+    }
+}
+
+.test {
+    padding: 30px;
+}

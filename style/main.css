@@ -84,7 +84,7 @@
   background-color: #f2f2f2;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 790px) and (max-width: 789px) {
   .main-header {
     display: none;
   }
@@ -124,6 +124,7 @@
   color: #000000;
   text-decoration: none;
   font-family: "teko", sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -210,8 +211,9 @@
 .side-menu .brand a {
   font-size: 2.9rem;
   color: #000000;
+  text-transform: uppercase;
   text-decoration: none;
-  font-family: "Quicksand", sans-serif;
+  font-family: "teko", sans-serif;
   font-weight: 550;
 }
 
@@ -363,6 +365,7 @@ html, body, * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 html :focus, body :focus, * :focus {
@@ -370,4 +373,165 @@ html :focus, body :focus, * :focus {
 }
 
 /*** main content ***/
+/** her **/
+.hero {
+  height: 90vh;
+  background-color: #f1f3f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2% 4%;
+  background-image: url("https://images.unsplash.com/photo-1524749292158-7540c2494485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  /* overlay */
+  /* title h1 */
+  /* sub title */
+  /* btns */
+  /* scroll animation */
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-family: "teko", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.hero h4 {
+  font-size: 1.3rem;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1;
+  color: #fff;
+}
+
+.hero .btns {
+  /* hire me button */
+  /* CTA btn */
+}
+
+.hero .btns button {
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-family: "Arvo", serif;
+  font-weight: 600;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.hero .btns .hire {
+  background-color: #50bda1;
+  color: #fff;
+}
+
+.hero .btns .hire:hover {
+  background-color: #3c9e85;
+}
+
+.hero .btns .cta {
+  background-color: #ff1e56;
+  color: #fff;
+}
+
+.hero .btns .cta:hover {
+  background-color: #ea003a;
+}
+
+.hero .scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50px;
+  width: 30px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+.hero .scroll .dot {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-animation: scrollDown 2s ease-out infinite;
+          animation: scrollDown 2s ease-out infinite;
+  /* animation */
+}
+
+@-webkit-keyframes scrollDown {
+  0% {
+    top: 5px;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    top: 30px;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 5px;
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    top: 30px;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.test {
+  padding: 30px;
+}
 /*# sourceMappingURL=main.css.map */
