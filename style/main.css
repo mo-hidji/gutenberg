@@ -375,6 +375,78 @@ body :focus,
 }
 
 /*** main content ***/
+/** notification bar **/
+.notification {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -webkit-box-shadow: 0 0px 1.4px rgba(0, 0, 0, 0.025), 0 0px 3.5px rgba(0, 0, 0, 0.035), 0 0px 7.1px rgba(0, 0, 0, 0.045), 0 0px 14.6px rgba(0, 0, 0, 0.055), 0 0px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0px 1.4px rgba(0, 0, 0, 0.025), 0 0px 3.5px rgba(0, 0, 0, 0.035), 0 0px 7.1px rgba(0, 0, 0, 0.045), 0 0px 14.6px rgba(0, 0, 0, 0.055), 0 0px 40px rgba(0, 0, 0, 0.08);
+  /* on mobile */
+}
+
+@media (max-width: 480px) {
+  .notification {
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.notification h1 {
+  font-family: "Arvo", serif;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .notification h1 {
+    font-size: .9rem;
+  }
+}
+
+.notification p {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+}
+
+.notification p a {
+  color: #3c9e85;
+}
+
+.notification .accept {
+  background-color: #50bda1;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  font-family: "Arvo", serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.notification .accept:hover {
+  background-color: #3c9e85;
+}
+
 /** her **/
 .hero {
   height: 90vh;
@@ -702,8 +774,8 @@ body :focus,
 }
 
 .features .feature:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
   -webkit-box-shadow: 0 0px 2.4px rgba(0, 0, 0, 0.02), 0 0px 8px rgba(0, 0, 0, 0.03), 0 0px 36px rgba(0, 0, 0, 0.05);
           box-shadow: 0 0px 2.4px rgba(0, 0, 0, 0.02), 0 0px 8px rgba(0, 0, 0, 0.03), 0 0px 36px rgba(0, 0, 0, 0.05);
 }

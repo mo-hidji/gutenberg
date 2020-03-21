@@ -18,6 +18,70 @@ body,
 }
 
 /*** main content ***/
+
+/** notification bar **/
+.notification {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    box-shadow:
+        0 0px 1.4px rgba(0, 0, 0, 0.025),
+        0 0px 3.5px rgba(0, 0, 0, 0.035),
+        0 0px 7.1px rgba(0, 0, 0, 0.045),
+        0 0px 14.6px rgba(0, 0, 0, 0.055),
+        0 0px 40px rgba(0, 0, 0, 0.08);
+
+    /* on mobile */ 
+    @media(max-width: $mobile) {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+
+    h1 {
+        font-family: $headerFont;
+        margin-bottom: 20px;
+
+        @media(max-width: $mobile) {
+            font-size: .9rem;
+        }
+    }
+
+    p {
+        font-family: $font;
+        line-height: 1.6;
+
+        a {
+            color: darken($success, 10);
+        }
+    }
+
+    .accept {
+        background-color: $success;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        color: $light;
+        font-family: $headerFont;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: .1s;
+
+        &:hover {
+            background-color: darken($success, 10);
+        }
+    }
+}
+
 /** her **/
 
 .hero {
@@ -247,7 +311,7 @@ body,
     align-items: center;
     padding: 4%;
 
-    /** change view **/ 
+    /** change view **/
     @media only screen and (max-width: $tablet) {
         flex-direction: column;
     }
@@ -270,7 +334,7 @@ body,
 
         /* hover */
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.06);
             box-shadow:
                 0 0px 2.4px rgba(0, 0, 0, 0.02),
                 0 0px 8px rgba(0, 0, 0, 0.03),

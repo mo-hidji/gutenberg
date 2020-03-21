@@ -156,6 +156,14 @@
 
 
 
+    <!-- NOTIFICATION BAR -->
+    <div class="notification" id="notif">
+        <h1>Cookie Notice</h1>
+        <p>We use cookies to ensure a smooth and valuable experience for our users. <a href="#">Read More</a></p>
+        <button class="accept" onclick="closeNotif()">Accept</button>
+    </div>
+
+
     <!--javascript-->
     <script src="/Js/index.js"></script>
 
@@ -174,6 +182,11 @@
         // OPEN btn
         function openMenu() {
             document.getElementById('sideMenu').style.transform = 'translateX(0%)';
+        }
+
+        // Close notification
+        function closeNotif() {
+            document.getElementById('notif').style.transform = 'translateX(150%)';
         }
     </script>
 
