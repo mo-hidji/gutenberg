@@ -247,18 +247,19 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 10px 40px;
 
         /* settings */
         .settings {
             margin-bottom: 40px;
             padding: 10px 0;
+            width: 100%;
 
             a {
                 opacity: .6;
                 display: block;
                 padding: 10px 40px;
-                width: 400px;
+                width: 100%;
+                max-width: 400px;
                 color: $dark;
                 text-decoration: none;
                 font-family: $font;

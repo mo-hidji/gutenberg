@@ -1,9 +1,11 @@
-/*** imports ***/ 
+/*** imports ***/
 @import 'variables', 'header', 'footer', 'utilities';
 
 /*** Reset ***/
 
-html, body, * {
+html,
+body,
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -15,11 +17,13 @@ html, body, * {
     }
 }
 
-/*** main content ***/ 
-/** her **/ 
+/*** main content ***/
+/** her **/
 
 .hero {
     height: 90vh;
+    max-width: 100vw;
+    width: 100%;
     background-color: $lightGray;
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@ html, body, * {
     position: relative;
     z-index: 1;
 
-    /* overlay */ 
+    /* overlay */
     &::after {
         content: '';
         position: absolute;
@@ -45,15 +49,21 @@ html, body, * {
         z-index: -1;
     }
 
-    /* title h1 */ 
+    /* title h1 */
     h1 {
         font-family: $headerFont;
         color: $light;
         text-transform: uppercase;
         font-size: 3rem;
+
+
+        /** change when it's on mobile **/
+        @media only screen and (max-width: $mobile) {
+            font-size: 1.8rem;
+        }
     }
 
-    /* sub title */ 
+    /* sub title */
     h4 {
         font-size: 1.3rem;
         font-family: $font;
@@ -61,7 +71,7 @@ html, body, * {
         color: $light;
     }
 
-    /* btns */ 
+    /* btns */
     .btns {
         button {
             border: none;
@@ -75,7 +85,7 @@ html, body, * {
             transition: .3s ease-out;
         }
 
-        /* hire me button */ 
+        /* hire me button */
         .hire {
             background-color: $success;
             color: $light;
@@ -85,7 +95,7 @@ html, body, * {
             }
         }
 
-        /* CTA btn */ 
+        /* CTA btn */
         .cta {
             background-color: $mainColor;
             color: $light;
@@ -96,7 +106,7 @@ html, body, * {
         }
     }
 
-    /* scroll animation */ 
+    /* scroll animation */
     .scroll {
         position: absolute;
         bottom: 20px;
@@ -119,7 +129,7 @@ html, body, * {
             background-color: #fff;
             animation: scrollDown 2s ease-out infinite;
 
-            /* animation */ 
+            /* animation */
             @keyframes scrollDown {
                 0% {
                     top: 5px;
