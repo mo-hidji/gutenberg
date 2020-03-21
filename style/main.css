@@ -394,6 +394,7 @@ body :focus,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 2333;
   -webkit-transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   transition: 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   -webkit-box-shadow: 0 0px 1.4px rgba(0, 0, 0, 0.025), 0 0px 3.5px rgba(0, 0, 0, 0.035), 0 0px 7.1px rgba(0, 0, 0, 0.045), 0 0px 14.6px rgba(0, 0, 0, 0.055), 0 0px 40px rgba(0, 0, 0, 0.08);

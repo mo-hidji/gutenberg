@@ -31,6 +31,7 @@ body,
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2333;
     transition: .6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     box-shadow:
         0 0px 1.4px rgba(0, 0, 0, 0.025),
