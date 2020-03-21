@@ -2,7 +2,7 @@
 /*** breakpoints ***/
 /*** Colors ***/
 /*** Fonts ***/
-@import url("https://fonts.googleapis.com/css?family=Lora|Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arvo|Quicksand|Teko&display=swap");
 /*** header ***/
 /** Main Menu for laptop screens **/
 .main-header {
@@ -33,11 +33,18 @@
 }
 
 .main-header .brand a {
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: #000000;
+  text-transform: uppercase;
   text-decoration: none;
-  font-family: "Lora", serif;
+  font-family: "teko", sans-serif;
   font-weight: bold;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main-header .brand a:hover {
+  color: #63c4ab;
 }
 
 .main-header .menu {
@@ -74,9 +81,7 @@
 }
 
 .main-header .menu a:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
 }
 
 @media (max-width: 790px) {
@@ -118,7 +123,7 @@
   font-size: 2rem;
   color: #000000;
   text-decoration: none;
-  font-family: "Lora", serif;
+  font-family: "teko", sans-serif;
   font-weight: bold;
 }
 
@@ -144,11 +149,11 @@
   right: 0;
   bottom: 0;
   max-height: 100%;
-  width: 200px;
+  width: 400px;
   max-width: 100%;
   background-color: #fff;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,14 +202,13 @@
 
 .side-menu .brand {
   margin-top: 40px;
-  padding: 20px;
   width: 100%;
-  max-width: 200px;
+  max-width: 400px;
   text-align: center;
 }
 
 .side-menu .brand a {
-  font-size: 1.9rem;
+  font-size: 2.9rem;
   color: #000000;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
@@ -232,10 +236,10 @@
   color: #000000;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 10px 40px;
   width: 100%;
-  max-width: 280px;
+  max-width: 400px;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -299,7 +303,7 @@
   opacity: .6;
   display: block;
   padding: 10px 40px;
-  width: 200px;
+  width: 400px;
   color: #000000;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
@@ -318,10 +322,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -329,7 +333,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 100%;
-  max-width: 200px;
+  max-width: 400px;
   margin-bottom: 40px;
 }
 

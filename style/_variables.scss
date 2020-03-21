@@ -14,7 +14,8 @@ $success: #50bda1;
 
 /*** Fonts ***/
 
-@import url('https://fonts.googleapis.com/css?family=Lora|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Quicksand|Teko&display=swap');
 
-$mainFont: 'Lora', serif;
+$mainFont: 'teko', sans-serif;
+$headerFonts:  'Arvo', serif;
 $font: 'Quicksand', sans-serif;
