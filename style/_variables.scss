@@ -1,0 +1,20 @@
+/*** breakpoints ***/
+
+$tablet: 790px;
+$mobile: 480px;
+$smallMobile: 360px;
+
+/*** Colors ***/ 
+
+$mainColor: #ff1e56;
+$light: #fff;
+$lightGray: #f1f3f4;
+$dark: #000000;
+$success: #50bda1;
+
+/*** Fonts ***/
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Quicksand&display=swap');
+
+$mainFont: 'Lora', serif;
+$font: 'Quicksand', sans-serif;

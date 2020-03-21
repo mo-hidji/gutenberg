@@ -1,0 +1,286 @@
+/*** header ***/
+
+/** Main Menu for laptop screens **/
+
+.main-header {
+    z-index: 990;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2% 4%;
+    background-color: $light;
+    position: sticky;
+    top: 0;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.006),
+        0 2.3px 5.3px rgba(0, 0, 0, 0.008),
+        0 4.4px 10px rgba(0, 0, 0, 0.01),
+        0 7.8px 17.9px rgba(0, 0, 0, 0.012),
+        0 14.6px 33.4px rgba(0, 0, 0, 0.014),
+        0 35px 80px rgba(0, 0, 0, 0.02);
+
+    /* brand logo */
+    .brand {
+        a {
+            font-size: 2rem;
+            color: $dark;
+            text-decoration: none;
+            font-family: $mainFont;
+            font-weight: bold;
+        }
+    }
+
+    /* menu */
+    .menu {
+        display: flex;
+
+        a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: $font;
+            color: $dark;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                transform: scale(0.9);
+                background-color: darken($light, 10);
+            }
+        }
+    }
+
+    /* Hide on small screens */
+    @media(max-width: $tablet) {
+        display: none;
+    }
+}
+
+/** Mobile Menu for small screens **/
+
+.mobile-menu {
+    z-index: 992;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 4%;
+    width: 100%;
+    background-color: $light;
+    position: sticky;
+    top: 0;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.006),
+        0 2.3px 5.3px rgba(0, 0, 0, 0.008),
+        0 4.4px 10px rgba(0, 0, 0, 0.01),
+        0 7.8px 17.9px rgba(0, 0, 0, 0.012),
+        0 14.6px 33.4px rgba(0, 0, 0, 0.014),
+        0 35px 80px rgba(0, 0, 0, 0.02);
+
+    /* brand logo */
+    .brand {
+        a {
+            font-size: 2rem;
+            color: $dark;
+            text-decoration: none;
+            font-family: $mainFont;
+            font-weight: bold;
+        }
+    }
+
+    /* toggler */
+    .toggler {
+        button {
+            line-height: .3;
+            font-size: 1.4rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    /* hide on big screens */
+    @media(min-width: $tablet) {
+        display: none;
+    }
+}
+
+/** side Menu for small screens **/
+
+.side-menu {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    width: 100%;
+    max-width: 280px;
+    background-color: $light;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .4s ease-out;
+    box-shadow:
+        0 1px 1.6px rgba(0, 0, 0, 0.006),
+        0 2.4px 3.9px rgba(0, 0, 0, 0.008),
+        0 4.5px 7.3px rgba(0, 0, 0, 0.01),
+        0 8px 13px rgba(0, 0, 0, 0.012),
+        0 15px 24.2px rgba(0, 0, 0, 0.014),
+        0 36px 58px rgba(0, 0, 0, 0.02);
+
+    /* close menu btn */
+    .close {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        text-decoration: none;
+        background-color: $lightGray;
+        color: $dark;
+        line-height: .55;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            transform: rotate(360deg);
+            background-color: $mainColor;
+            color: $light;
+        }
+    }
+
+    /* brand */
+    .brand {
+        margin-top: 40px;
+        padding: 20px;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+
+        a {
+            font-size: 2.5rem;
+            color: $dark;
+            text-decoration: none;
+            font-family: $font;
+            font-weight: 550;
+        }
+    }
+
+    /* menu */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+
+        a {
+            color: $dark;
+            text-decoration: none;
+            font-family: $font;
+            font-size: 1.4rem;
+            padding: 10px 40px;
+            width: 100%;
+            max-width: 280px;
+            transition: .2s;
+
+            span {
+                width: 50px;
+                margin-right: 20px;
+
+                .fa {
+                    text-align: center;
+                    font-size: .6rem;
+                }
+            }
+
+            .sp1 {
+                color: #ff1e56;
+            }
+
+            .sp2 {
+                color: #be79df;
+            }
+
+            .sp3 {
+                color: #481380;
+            }
+
+            .sp4 {
+                color: #98d6ea;
+            }
+
+            &:hover {
+                background-color: darken($light, 12);
+            }
+        }
+    }
+
+    /* settings & preferences */
+    .preferences {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 40px;
+
+        /* settings */
+        .settings {
+            margin-bottom: 40px;
+            padding: 10px 0;
+
+            a {
+                opacity: .6;
+                display: block;
+                padding: 10px 40px;
+                width: 280px;
+                color: $dark;
+                text-decoration: none;
+                font-family: $font;
+
+                span {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        /* login btns */
+        .login {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            max-width: 280px;
+            margin-bottom: 40px;
+
+            a {
+                color: $dark;
+                text-decoration: none;
+                font-family: $font;
+                padding: 10px 20px;
+
+                &:nth-child(even) {
+                    color: $light;
+                    font-weight: 600;
+                    background-color: $success;
+                    transition: .2s;
+
+                    &:hover {
+                        background-color: darken($success, 10);
+                    }
+                }
+            }
+        }
+    }
+}
