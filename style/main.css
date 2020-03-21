@@ -167,8 +167,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all .4s ease-out;
-  transition: all .4s ease-out;
+  -webkit-transition: all 0.7s cubic-bezier(1, 0, 0, 1);
+  transition: all 0.7s cubic-bezier(1, 0, 0, 1);
   -webkit-box-shadow: 0 1px 1.6px rgba(0, 0, 0, 0.006), 0 2.4px 3.9px rgba(0, 0, 0, 0.008), 0 4.5px 7.3px rgba(0, 0, 0, 0.01), 0 8px 13px rgba(0, 0, 0, 0.012), 0 15px 24.2px rgba(0, 0, 0, 0.014), 0 36px 58px rgba(0, 0, 0, 0.02);
           box-shadow: 0 1px 1.6px rgba(0, 0, 0, 0.006), 0 2.4px 3.9px rgba(0, 0, 0, 0.008), 0 4.5px 7.3px rgba(0, 0, 0, 0.01), 0 8px 13px rgba(0, 0, 0, 0.012), 0 15px 24.2px rgba(0, 0, 0, 0.014), 0 36px 58px rgba(0, 0, 0, 0.02);
   /* close menu btn */
@@ -245,33 +245,32 @@
 }
 
 .side-menu .menu a span {
-  width: 20px;
-  margin-right: 2px;
+  text-align: left;
 }
 
-.side-menu .menu a span .fa {
-  text-align: center;
-  font-size: .6rem;
+.side-menu .menu a span .fas, .side-menu .menu a span .fab {
+  font-size: 1.2rem;
+  width: 30px;
 }
 
 .side-menu .menu a .sp1 {
-  color: #ff1e56;
+  color: #01295f;
 }
 
 .side-menu .menu a .sp2 {
-  color: #be79df;
+  color: #ffbf00;
 }
 
 .side-menu .menu a .sp3 {
-  color: #481380;
+  color: #e83f6f;
 }
 
 .side-menu .menu a .sp4 {
-  color: #98d6ea;
+  color: #2274a5;
 }
 
 .side-menu .menu a:hover {
-  background-color: #e0e0e0;
+  background-color: #f2f2f2;
 }
 
 .side-menu .preferences {
@@ -308,11 +307,11 @@
   color: #000000;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
+  text-align: left;
 }
 
-.side-menu .preferences .settings a span {
-  width: 20px;
-  margin-right: 10px;
+.side-menu .preferences .settings a span .fas, .side-menu .preferences .settings a span .fab {
+  width: 30px;
 }
 
 .side-menu .preferences .settings a:hover {
@@ -400,6 +399,7 @@ body :focus,
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   z-index: 1;
   /* overlay */
@@ -543,7 +543,178 @@ body :focus,
   }
 }
 
-.test {
+/** about me **/
+.who {
+  padding: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* change view on mobile and tablet */
+}
+
+@media only screen and (max-width: 790px) {
+  .who {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100vw;
+  }
+}
+
+.who .myImg img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.who .aboutMe {
+  /* change view */
+  width: 50%;
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 790px) {
+  .who .aboutMe {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+}
+
+.who .aboutMe h1 {
+  font-family: "Arvo", serif;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 790px) {
+  .who .aboutMe h1 {
+    font-size: 2rem;
+  }
+}
+
+.who .aboutMe h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  color: #ff1e56;
+}
+
+.who .aboutMe p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.who .aboutMe .about {
+  margin-top: 10px;
+  border: none;
+  background-color: #50bda1;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Arvo", serif;
+  -webkit-transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.who .aboutMe .about:hover {
+  background-color: #3c9e85;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/** Features **/
+.features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4%;
+}
+
+.features .feature {
   padding: 30px;
+  width: 33%;
+  margin: 10px;
+  background-color: #f1f3f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.9s cubic-bezier(1, 2, 0, 3);
+  transition: all 0.9s cubic-bezier(1, 2, 0, 3);
+  cursor: pointer;
+  /* hover */
+  /* img */
+}
+
+.features .feature:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0px 2.4px rgba(0, 0, 0, 0.02), 0 0px 8px rgba(0, 0, 0, 0.03), 0 0px 36px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0px 2.4px rgba(0, 0, 0, 0.02), 0 0px 8px rgba(0, 0, 0, 0.03), 0 0px 36px rgba(0, 0, 0, 0.05);
+}
+
+.features .feature h3 {
+  margin: 10px 0;
+  font-family: "Arvo", serif;
+}
+
+.features .feature p {
+  font-family: "Quicksand", sans-serif;
+}
+
+.features .feature .img {
+  height: 60px;
+  width: 60px;
+  background-image: url("https://imgbbb.com/images/2020/03/21/58695660_597006830800564_607506369351778304_n.jpg");
+  background-size: cover;
+  background-position: 10%;
+  border-radius: 50%;
+}
+
+.features .feature .img3 {
+  background-image: url("https://images.unsplash.com/photo-1584598437775-a34887172533?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+.features .feature .img2 {
+  background-image: url("https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=515&q=80");
 }
 /*# sourceMappingURL=main.css.map */
