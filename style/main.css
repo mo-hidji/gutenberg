@@ -356,6 +356,20 @@
   background-color: #3c9e85;
 }
 
+/*** flickity ***/
+ol.flickity-page-dots {
+  width: 100%;
+  max-width: 400px;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+button.flickity-button {
+  display: none;
+}
+
 /*** Reset ***/
 html,
 body,
@@ -1010,6 +1024,14 @@ body :focus,
   z-index: -2;
   -webkit-animation: fade 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
           animation: fade 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  /* change view on tablet */
+}
+
+@media (max-width: 790px) {
+  .my-work .about .contact:after {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 @-webkit-keyframes fade {
@@ -1034,5 +1056,74 @@ body :focus,
     -webkit-filter: blur(5px);
             filter: blur(5px);
   }
+}
+
+/** feedbacks */
+.feedbacks {
+  padding: 4%;
+  background-color: #ebebeb;
+  /* feedback settings */
+}
+
+.feedbacks .feedback {
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  /* images */
+  /* image cells */
+}
+
+.feedbacks .feedback .img {
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.feedbacks .feedback .f1 {
+  background-image: url("https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=815&q=80");
+}
+
+.feedbacks .feedback .f2 {
+  background-image: url("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+}
+
+.feedbacks .feedback .f3 {
+  background-image: url("https://images.unsplash.com/photo-1498661443338-20aca70e1d28?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80");
+}
+
+.feedbacks .feedback .f4 {
+  background-image: url("https://images.unsplash.com/photo-1553795886-d6ab6880b373?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=400&q=60");
+}
+
+.feedbacks .feedback h1 {
+  margin: 10px;
+  font-family: "Arvo", serif;
+}
+
+.feedbacks .feedback p {
+  margin: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.feedbacks .feedback h6 {
+  font-family: "Arvo", serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */

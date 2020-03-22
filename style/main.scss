@@ -532,6 +532,13 @@ body,
                 z-index: -2;
                 animation: fade 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
 
+
+
+                /* change view on tablet */
+                @media (max-width: $tablet) {
+                    animation: none;
+                }
+
                 @keyframes fade {
                     0% {
                         padding: 0;
@@ -545,6 +552,66 @@ body,
                     }
                 }
             }
+        }
+    }
+}
+
+/** feedbacks */
+.feedbacks {
+    padding: 4%;
+    background-color: darken($light, 8);
+
+    /* feedback settings */
+    .feedback {
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+
+        /* images */
+        .img {
+            background-position: center;
+            background-size: cover;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        /* image cells */ 
+        .f1 {
+            background-image: url('https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=815&q=80');
+        }
+
+        .f2 {
+            background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+        }
+
+        .f3 {
+            background-image: url('https://images.unsplash.com/photo-1498661443338-20aca70e1d28?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80');
+        }
+
+        .f4 {
+            background-image: url('https://images.unsplash.com/photo-1553795886-d6ab6880b373?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=400&q=60');
+        }
+
+        h1 {
+            margin: 10px;
+            font-family: $headerFont;
+        }
+
+        p {
+            margin: 10px;
+            font-family: $font;
+        }
+
+        h6 {
+            font-family: $headerFont;
+            font-size: 1.3rem;
+            text-transform: uppercase;
         }
     }
 }

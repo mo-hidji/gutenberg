@@ -19,6 +19,9 @@
     <!-- aos css -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!--javascript-->
+    <script src="/js/main.js"></script>
+
     <title>HidjiBlog</title>
 </head>
 
@@ -95,7 +98,7 @@
 
 
     <!--Main-->
-    <div class="main">
+    <div class="main" id="Main">
         <div class="hero">
 
             <!-- title -->
@@ -126,7 +129,9 @@
             <div class="aboutMe">
                 <h1>I am Mohammed Hidji</h1>
                 <h4>Web Designer/Developer</h4>
-                <p>Welcome on my Portfolio! I am a Junior Front-End Web Developer. I also have good hands on website development. I'm new in this portal but I'll give quality work to my clients. I worked for so many clients with positive feedback and have good relations with them.</p>
+                <p>Welcome on my Portfolio! I am a Junior Front-End Web Developer. I also have good hands on website
+                    development. I'm new in this portal but I'll give quality work to my clients. I worked for so many
+                    clients with positive feedback and have good relations with them.</p>
                 <button class="about">More about me</button>
             </div>
         </div>
@@ -137,102 +142,150 @@
                 <div class="img img2"></div>
                 <h3>Responsive Design</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis
+                    asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
                 </p>
             </div>
             <div class="feature">
                 <div class="img"></div>
                 <h3>Design Research</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis
+                    asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
                 </p>
             </div>
             <div class="feature">
                 <div class="img img3"></div>
                 <h3>Developer Support</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officiis nemo molestias! At, nobis
+                    asperiores. Temporibus, ipsum? Accusamus, blanditiis voluptas.
                 </p>
             </div>
         </div>
-    </div>
 
 
-
-    <!-- NOTIFICATION BAR -->
-    <div class="notification" id="notif">
-        <h1>Cookie Notice</h1>
-        <p>We use cookies to ensure a smooth and valuable experience for our users. <a href="#">Read More</a></p>
-        <button class="accept" onclick="closeNotif()">Accept</button>
-    </div>
-
-
-    <!-- my work -->
-    <div class="my-work" id="myWork">
-        <div class="img">
-            <img src="https://asata.beplusthemes.com/wp-content/uploads/2019/06/img3.jpg" alt="">
-        </div>
-
-        <!-- about my work -->
-        <div class="about">
-            <h1>we are design & development team that is proud of our work</h1>
-            <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus</p>
-
-            <!--skills-->
-            <div class="skills">
-                <div class="skill">
-                    <h5><span>70%</span> Adobe Illustrator</h5>
-                    <div class="bar"></div>
-                </div>
-                <div class="skill">
-                    <h5><span>80%</span> Node.js Developement</h5>
-                    <div class="bar node"></div>
-                </div>
-                <div class="skill">
-                    <h5><span>60%</span> Adobe Photoshop</h5>
-                    <div class="bar ps"></div>
-                </div>
+        <!-- my work -->
+        <div class="my-work" id="myWork">
+            <div class="img">
+                <img src="https://asata.beplusthemes.com/wp-content/uploads/2019/06/img3.jpg" alt="">
             </div>
 
-            <!-- contact btn -->
-            <button class="contact">Contact Me</button>
+            <!-- about my work -->
+            <div class="about">
+                <h1>we are design & development team that is proud of our work</h1>
+                <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam
+                    processus</p>
+
+                <!--skills-->
+                <div class="skills">
+                    <div class="skill">
+                        <h5><span>70%</span> Adobe Illustrator</h5>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="skill">
+                        <h5><span>80%</span> Node.js Developement</h5>
+                        <div class="bar node"></div>
+                    </div>
+                    <div class="skill">
+                        <h5><span>60%</span> Adobe Photoshop</h5>
+                        <div class="bar ps"></div>
+                    </div>
+                </div>
+
+                <!-- contact btn -->
+                <button class="contact">Contact Me</button>
+            </div>
         </div>
-    </div>
+
+        <!--customers comment-->
+        <div class="feedbacks" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": true }'>
+            <div class="feedback">
+                <div class="img f1">
+
+                </div>
+                <div class="name">
+                    <h1>Gabriel Garcia</h1>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa? Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Quidem veniam magni, labore quod earum nisi ea accusamus
+                        aspernatur vel quibusdam.</p>
+                </div>
+                <div class="profession">
+                    <h6>Web Designer</h6>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="img f2">
+
+                </div>
+                <div class="name">
+                    <h1>Anthonny Nathan</h1>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ipsa? Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Quidem veniam magni, labore quod earum nisi ea accusamus
+                        aspernatur vel quibusdam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium,
+                        tempore!</p>
+                </div>
+                <div class="profession">
+                    <h6>Sales Expert</h6>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="img f3">
+                    <img src="" alt="">
+                </div>
+                <div class="name">
+                    <h1>Samuel Davis</h1>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corporis necessitatibus neque
+                        facilis dolorum totam dignissimos quisquam at ipsum id.</p>
+                </div>
+                <div class="profession">
+                    <h6>Marketing CEO</h6>
+                </div>
+            </div>
+            <div class="feedback">
+                <div class="img f4">
+
+                </div>
+                <div class="name">
+                    <h1>Maria Freeman</h1>
+                </div>
+                <div class="comment">
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident minima quae, in maiores
+                        ratione eos magni fugit, minus, blanditiis consequatur vitae modi itaque. Lorem ipsum dolor sit.
+                    </p>
+                </div>
+                <div class="profession">
+                    <h6>Data Analiyzer</h6>
+                </div>
+            </div>
+        </div>
 
 
+        <!-- NOTIFICATION BAR -->
+        <div class="notification" id="notif">
+            <h1>Cookie Notice</h1>
+            <p>We use cookies to ensure a smooth and valuable experience for our users. <a href="#">Read More</a></p>
+            <button class="accept" onclick="closeNotif()">Accept</button>
+        </div>
 
+        <!--external frameworks-->
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/ad8503e883.js" crossorigin="anonymous"></script>
 
-    <!--javascript-->
-    <script src="/Js/index.js"></script>
+        <!-- slider -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-    <!--scripts-->
-    <script>
-        // close btn
-        function closeMenu() {
-            document.getElementById('sideMenu').style.transform = 'translateX(100%)';
-        }
+        <!-- aos -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        // OPEN btn
-        function openMenu() {
-            document.getElementById('sideMenu').style.transform = 'translateX(0%)';
-        }
-
-        // Close notification
-        function closeNotif() {
-            document.getElementById('notif').style.transform = 'translateX(150%)';
-        }
-    </script>
-
-    <!--external frameworks-->
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/ad8503e883.js" crossorigin="anonymous"></script>
-
-    <!-- slider -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-    <!-- aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+        <!--Jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
 </html>
