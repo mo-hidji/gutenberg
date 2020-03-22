@@ -274,6 +274,23 @@
             <button class="accept" onclick="closeNotif()">Accept</button>
         </div>
 
+        <!--js-->
+        <script>
+            // close btn
+            function closeMenu() {
+                document.getElementById('sideMenu').style.transform = 'translateX(100%)';
+            }
+
+            // OPEN btn
+            function openMenu() {
+                document.getElementById('sideMenu').style.transform = 'translateX(0%)';
+            }
+
+            // Close notification
+            function closeNotif() {
+                document.getElementById('notif').style.transform = 'translateX(150%)';
+            }
+        </script>
         <!--external frameworks-->
         <!-- font awesome -->
         <script src="https://kit.fontawesome.com/ad8503e883.js" crossorigin="anonymous"></script>
