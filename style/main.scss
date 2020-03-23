@@ -28,7 +28,7 @@ body,
     max-width: 400px;
     padding: 30px;
     background-color: $light;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 2333;
@@ -615,3 +615,98 @@ body,
         }
     }
 }
+
+/** newsletter **/ 
+.newsletter {
+    padding: 10%;
+    background-image: url('https://images.unsplash.com/photo-1506585345028-d9d1525ecb21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+
+    /* change view on small screens */ 
+    @media only screen and (max-width: 497px) {
+        display: none;
+    }
+
+    /* overlay */ 
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $dark;
+        opacity: .2;
+        filter: blur(10px) brightness(1);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .news-title {
+        h2 {
+            font-size: 1.3rem;
+            font-family: $font;
+            text-align: center;
+            padding: 0 40px;
+            color: $light;
+        }
+    }
+
+    /* input */ 
+    .input {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            font-size: 1.3rem;
+            height: 60px;
+            width: 50%;
+            border-radius: 50px 0 0 50px;
+            background-color: darken($light, 8);
+            border: none;
+            color: $dark;
+            padding: 10px 30px;
+            transition: .4s ease-in-out;
+
+            &:focus {
+                background-color: darken($light, 16);
+            }
+        }
+
+        button {
+            padding: 10px;
+            font-size: 2rem;   
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 0 50px 50px 0;
+            border: none;
+            background-color: darken($mainColor, 5);
+            color: $light;
+            cursor: pointer;
+            transition: .3s ease;
+            position: relative;
+
+            &:hover {
+                background-color: darken($mainColor, 10);
+            }
+
+            .fab {
+                position: absolute;
+                left: 40%;
+                top: 50%;
+                transform: translate(-40%, -50%);
+            }
+        }
+    }
+}
+
+
+
+

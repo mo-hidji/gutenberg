@@ -6,6 +6,7 @@
 /*** header ***/
 /** Main Menu for laptop screens **/
 .main-header {
+  background-color: #fff;
   z-index: 990;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,7 +22,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px 4%;
-  background-color: #fff;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -351,6 +351,162 @@
   background-color: #3c9e85;
 }
 
+/*** footer ***/
+.footer {
+  padding: 4%;
+  /** brand **/
+  /** footer links **/
+  /** social media **/
+  /** copyright **/
+}
+
+.footer .brand {
+  padding-bottom: 4%;
+}
+
+.footer .brand a {
+  font-family: "Arvo", serif;
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+}
+
+.footer .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+  /* change view on small devices */
+  /* left-links */
+  /* right links */
+  /* link title */
+  /* links */
+}
+
+@media only screen and (max-width: 360px) {
+  .footer .footer-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer-links .left-links {
+    width: 100%;
+  }
+  .footer .footer-links .right-links {
+    width: 100%;
+  }
+}
+
+.footer .footer-links .left-links {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.footer .footer-links .right-links {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.footer .footer-links .link-title h3 {
+  font-family: "Arvo", serif;
+}
+
+.footer .footer-links .links {
+  margin-top: 10px;
+}
+
+.footer .footer-links .links a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  font-family: "Quicksand", sans-serif;
+  padding: 10px;
+  margin: 0 5px;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+
+.footer .footer-links .links a:hover {
+  background-color: #ebebeb;
+}
+
+.footer .social-media {
+  padding-top: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* links */
+  /* insta */
+  /* insta */
+  /* insta */
+  /* insta */
+}
+
+.footer .social-media a {
+  font-size: 2.3rem;
+  color: #000000;
+  line-height: .2;
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: 0.4s cubic-bezier(1, 0, 0, 1);
+  /* insta */
+}
+
+.footer .social-media a .fa-instagram {
+  height: 32.2px;
+}
+
+.footer .social-media .instagram:hover {
+  background-color: #ff7272;
+  color: #fff;
+}
+
+.footer .social-media .twitter:hover {
+  background-color: #98d6ea;
+  color: #fff;
+}
+
+.footer .social-media .facebook:hover {
+  background-color: #9399ff;
+  color: #fff;
+}
+
+.footer .social-media .pinterest:hover {
+  background-color: #fd5e53;
+  color: #fff;
+}
+
+.footer .copyright h3 {
+  font-family: "Arvo", serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /*** flickity ***/
 ol.flickity-page-dots {
   width: 100%;
@@ -393,7 +549,9 @@ body :focus,
   max-width: 400px;
   padding: 30px;
   background-color: #fff;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1120,5 +1278,109 @@ body :focus,
   font-family: "Arvo", serif;
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+
+/** newsletter **/
+.newsletter {
+  padding: 10%;
+  background-image: url("https://images.unsplash.com/photo-1506585345028-d9d1525ecb21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  /* change view on small screens */
+  /* overlay */
+  /* input */
+}
+
+@media only screen and (max-width: 497px) {
+  .newsletter {
+    display: none;
+  }
+}
+
+.newsletter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: .2;
+  -webkit-filter: blur(10px) brightness(1);
+          filter: blur(10px) brightness(1);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.newsletter .news-title h2 {
+  font-size: 1.3rem;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  padding: 0 40px;
+  color: #fff;
+}
+
+.newsletter .input {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter .input input {
+  font-size: 1.3rem;
+  height: 60px;
+  width: 50%;
+  border-radius: 50px 0 0 50px;
+  background-color: #ebebeb;
+  border: none;
+  color: #000000;
+  padding: 10px 30px;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.newsletter .input input:focus {
+  background-color: #d6d6d6;
+}
+
+.newsletter .input button {
+  padding: 10px;
+  font-size: 2rem;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0 50px 50px 0;
+  border: none;
+  background-color: #ff0543;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  position: relative;
+}
+
+.newsletter .input button:hover {
+  background-color: #ea003a;
+}
+
+.newsletter .input button .fab {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
 }
 /*# sourceMappingURL=main.css.map */
